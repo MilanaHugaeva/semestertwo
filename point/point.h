@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include <iostream>
 namespace miit::figure
 {
@@ -6,35 +6,35 @@ namespace miit::figure
 	{
 	public:
 		/// <summary>
-		/// Конструктор класса point
+		/// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР° point
 		/// </summary>
-		/// <param name="x"> x компонента точки </param>
-		/// <param name="y"> y компонента точки </param>
-		/// <param name="z"> z компонента точки </param>
+		/// <param name="x"> x РєРѕРјРїРѕРЅРµРЅС‚Р° С‚РѕС‡РєРё </param>
+		/// <param name="y"> y РєРѕРјРїРѕРЅРµРЅС‚Р° С‚РѕС‡РєРё </param>
+		/// <param name="z"> z РєРѕРјРїРѕРЅРµРЅС‚Р° С‚РѕС‡РєРё </param>
 		explicit point(double x, double y, double z);
 
 		/// <summary>
-		/// Получить x компоненту точки 
+		/// РџРѕР»СѓС‡РёС‚СЊ x РєРѕРјРїРѕРЅРµРЅС‚Сѓ С‚РѕС‡РєРё 
 		/// </summary>
-		/// <returns> x компонента точки</returns>
+		/// <returns> x РєРѕРјРїРѕРЅРµРЅС‚Р° С‚РѕС‡РєРё</returns>
 		double x() const;
 
 		/// <summary>
-		/// Получить y компоненту точки 
+		/// РџРѕР»СѓС‡РёС‚СЊ y РєРѕРјРїРѕРЅРµРЅС‚Сѓ С‚РѕС‡РєРё 
 		/// </summary>
-		/// <returns> y компонента точки</returns>
+		/// <returns> y РєРѕРјРїРѕРЅРµРЅС‚Р° С‚РѕС‡РєРё</returns>
 		double y() const;
 
 		/// <summary>
-		/// Получить z компоненту точки 
+		/// РџРѕР»СѓС‡РёС‚СЊ z РєРѕРјРїРѕРЅРµРЅС‚Сѓ С‚РѕС‡РєРё 
 		/// </summary>
-		/// <returns> z компонента точки</returns>
+		/// <returns> z РєРѕРјРїРѕРЅРµРЅС‚Р° С‚РѕС‡РєРё</returns>
 		double z() const;
 
 		/// <summary>
-		/// Получить String представление точки
+		/// РџРѕР»СѓС‡РёС‚СЊ String РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ С‚РѕС‡РєРё
 		/// </summary>
-		/// <returns> String представление точки </returns>
+		/// <returns> String РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ С‚РѕС‡РєРё </returns>
 		friend const std::string toString();
 
 		friend std::ostream& operator<< (std::ostream&, const point*);
