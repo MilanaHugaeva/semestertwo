@@ -21,14 +21,19 @@ double point::getZ() const
 	return this->z;
 }
 
-const std::string toString()
+std::ostream& miit::figure::operator<<(std::ostream& stream, const point& point)
 {
-	return "";
+	stream << "Point(" << point.getX() << "," << point.getY() << "," << point.getZ() << ")";
 }
 
-std::ostream& miit::figure::operator<<(std::ostream& stream, const point* point)
+std::istream& miit::figure::operator>>(std::istream& stream, const point& point)
 {
-	stream << "Point(" << point->getX() << "," << point->getY() << "," << point->getZ() << ")";
+	// TODO: вставьте здесь оператор return
+}
+
+bool miit::figure::operator==(const point& left, const point& right)
+{
+	return false;
 }
 
 const std::string point::toString()
