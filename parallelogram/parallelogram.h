@@ -14,13 +14,13 @@ namespace miit::figure
 		/// <param name="vertex3">Вершина 3</param>
 		parallelogram(const point& vertex1, const point& vertex2, const point& vertex3);
 
-		const point& vertex1() const;
-		const point& vertex2() const;
-		const point& vertex3() const;
+		point getVertex1() const;
+		point getVertex2() const;
+		point getVertex3() const;
 
 	private:
-		const point& vertex1;
-		const point& vertex1;
-		const point& vertex1;
+		const point vertex1;
+		const point vertex2;
+		const point vertex3;
 	};
 }

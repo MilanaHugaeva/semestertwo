@@ -1,4 +1,5 @@
-#include <sstream>
+﻿#include <sstream>
+#include <limits>
 #include "point.h"
 
 using namespace miit::figure;
@@ -33,7 +34,11 @@ std::istream& miit::figure::operator>>(std::istream& stream, point& point)
 
 bool miit::figure::operator==(const point& left, const point& right)
 {
-	return left.x==right.x && left.y == right.y && left.z == right.z;
+	constexpr double epsilon = std::numeric_limits<double>::epsilon();
+
+	return std::abs(left.x - right.x) < epsilon &&
+		std::abs(left.y - right.y) < epsilon &&
+		std::abs(left.z - right.z) < epsilon;
 }
 
 bool miit::figure::operator!=(const point& left, const point& right)
@@ -41,9 +46,9 @@ bool miit::figure::operator!=(const point& left, const point& right)
 	return !operator==(left, right);
 }
 
-const std::string point::toString()
+const std::string toString(const point& point)
 {
 	std::stringstream ss;
-	ss << this;
+	ss << point;
 	return ss.str();
 }

@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "../point/point.h"
 
 namespace miit::figure
@@ -8,10 +8,25 @@ namespace miit::figure
 	public:
 		line(const point& start, const point& end);
 
-		const point& getStart() const;
-		const point& getEnd() const;
+		/// <summary>
+		/// Получение начальной точки стороны
+		/// </summary>
+		/// <returns></returns>
+		point getStart() const;
+
+		/// <summary>
+		/// Получение конечной точки стороны 
+		/// </summary>
+		/// <returns></returns>
+		point getEnd() const;
+
+		/// <summary>
+		/// Получение расстояния между начальной и конечной точками
+		/// </summary>
+		/// <returns></returns>
+		double get_length() const;
 	private:
-		const point& start;
-		const point& end;
+		const point start;
+		const point end;
 	};
 }
