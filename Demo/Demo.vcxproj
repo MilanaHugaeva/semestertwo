@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{e322c25f-f6da-4691-995a-bc7eb387f600}</ProjectGuid>
-    <RootNamespace>parallelepiped</RootNamespace>
+    <ProjectGuid>{9222e834-cd69-4b61-b636-71a766a055e6}</ProjectGuid>
+    <RootNamespace>Demo</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -128,15 +128,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="parallelepiped.h" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\helplib\helplib.vcxproj">
+      <Project>{82cee720-796c-4714-836d-cb49da5c6ac3}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\line\line.vcxproj">
+      <Project>{73634d8c-e28f-4639-89f8-9730b36f4152}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\parallelepiped\parallelepiped.vcxproj">
+      <Project>{e322c25f-f6da-4691-995a-bc7eb387f600}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\point\point.vcxproj">
       <Project>{03a67d26-48ec-4f13-a94a-d84559a6dd50}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="parallelepiped.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

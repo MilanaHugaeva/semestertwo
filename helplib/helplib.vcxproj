@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{e322c25f-f6da-4691-995a-bc7eb387f600}</ProjectGuid>
-    <RootNamespace>parallelepiped</RootNamespace>
+    <ProjectGuid>{82cee720-796c-4714-836d-cb49da5c6ac3}</ProjectGuid>
+    <RootNamespace>helplib</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -128,15 +128,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="parallelepiped.h" />
+    <ClInclude Include="math.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\point\point.vcxproj">
-      <Project>{03a67d26-48ec-4f13-a94a-d84559a6dd50}</Project>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="parallelepiped.cpp" />
+    <ClCompile Include="math.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
